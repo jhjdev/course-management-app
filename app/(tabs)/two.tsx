@@ -1,6 +1,4 @@
-import { ScrollView, StyleSheet } from 'react-native';
-
-import EditScreenInfo from '@/components/EditScreenInfo';
+import { ScrollView } from 'react-native';
 import { Text, View } from '@/components/Themed';
 import React from 'react';
 import { FlatList } from 'react-native';
@@ -23,12 +21,6 @@ export default function TabTwoScreen() {
 
   return (
     <View className="flex-1 items-center justify-center bg-white">
-      {/* <View
-        style={styles.separator}
-        lightColor="#eee"
-        darkColor="rgba(255,255,255,0.1)"
-      />
-      <EditScreenInfo path="app/(tabs)/index.tsx" /> */}
       <ScrollView className="p-5 w-full">
         {/* Started Courses Section */}
         <View className="mb-6">

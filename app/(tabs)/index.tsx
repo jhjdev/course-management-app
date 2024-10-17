@@ -1,20 +1,8 @@
-import {
-  ActivityIndicator,
-  FlatList,
-  Image,
-  ScrollView,
-  StyleSheet,
-} from 'react-native';
-
-import EditScreenInfo from '@/components/EditScreenInfo';
+import { FlatList, ScrollView, StyleSheet } from 'react-native';
 import { Text, View } from '@/components/Themed';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useAtom } from 'jotai';
-import {
-  coursesAtom,
-  isLoadingAtom,
-  fetchCoursesAtom,
-} from '@/stores/courseStore';
+import { coursesAtom, fetchCoursesAtom } from '@/stores/courseStore';
 import CourseCard from '../../components/CourseCard';
 
 interface Lesson {
@@ -34,7 +22,6 @@ interface Course {
 
 export default function TabOneScreen() {
   const [courses] = useAtom(coursesAtom);
-  const [isLoading] = useAtom(isLoadingAtom);
   const [, fetchCourses] = useAtom(fetchCoursesAtom);
 
   useEffect(() => {
@@ -50,12 +37,6 @@ export default function TabOneScreen() {
       className="flex-1 items-center justify-center bg-white"
       style={styles.container}
     >
-      {/* <View
-        style={styles.separator}
-        lightColor="#eee"
-        darkColor="rgba(255,255,255,0.1)"
-      />
-      <EditScreenInfo path="app/(tabs)/index.tsx" /> */}
       <ScrollView className="p-5">
         {/* Started Courses Section */}
         <View className="mb-6">
