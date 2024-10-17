@@ -5,21 +5,6 @@ import { useAtom } from 'jotai';
 import { coursesAtom, fetchCoursesAtom } from '@/stores/courseStore';
 import CourseCard from '../../components/CourseCard';
 
-interface Lesson {
-  id: string;
-  name: string;
-  duration: number;
-}
-
-interface Course {
-  id: string;
-  name: string;
-  description: string;
-  lessons: Lesson[];
-  coverImage: string;
-  duration: number;
-}
-
 export default function TabOneScreen() {
   const [courses] = useAtom(coursesAtom);
   const [, fetchCourses] = useAtom(fetchCoursesAtom);
