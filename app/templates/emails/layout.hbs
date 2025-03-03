@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>{{subject}}</title>
+    <style>
+        /* Reset styles */
+        body, p, div, span, h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+        }
+        
+        /* Responsive container */
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header and branding */
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .logo {
+            max-width: 200px;
+            height: auto;
+        }
+        
+        /* Content area */
+        .content {
+            padding: 30px 20px;
+            background-color: #ffffff;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f9fa;
+            font-size: 12px;
+            color: #666666;
+        }
+        
+        /* Buttons */
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        
+        /* Responsive adjustments */
+        @media only screen and (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+            .content {
+                padding: 20px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="{{logoUrl}}" alt="{{companyName}}" class="logo">
+        </div>
+        
+        <div class="content">
+            {{{body}}}
+        </div>
+        
+        <div class="footer">
+            <p>&copy; {{currentYear}} {{companyName}}. All rights reserved.</p>
+            <p>
+                <a href="{{unsubscribeUrl}}">Unsubscribe</a> |
+                <a href="{{privacyUrl}}">Privacy Policy</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+

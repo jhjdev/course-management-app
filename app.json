@@ -1,19 +1,25 @@
 {
-  "expo": {
-    "name": "female-invest",
-    "slug": "female-invest",
+"expo": {
+    "sdkVersion": "52.0.0",
+    "newArchEnabled": true,
+    "name": "Course Management App",
+    "slug": "course-management-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
-    "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "scheme": "course-management-app",
     "ios": {
-      "supportsTablet": true
+    "supportsTablet": true,
+    "bundleIdentifier": "com.coursemanagement.app"
     },
     "android": {
       "adaptiveIcon": {
@@ -22,12 +28,15 @@
       }
     },
     "web": {
-      "bundler": "metro",
-      "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router"
+      [
+        "expo-router",
+        {
+          "origin": "src"
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
